@@ -8,7 +8,7 @@ const FoodGallery = () => {
       `https://www.themealdb.com/api/json/v1/1/search.php?s=${query}`
     );
     const data = await res.json();
-    setMeals(data.meals || []);
+    setMeals(data.meals || []); //meals empty ayitt start akkunth []
   };
 
   useEffect(() => {
@@ -19,6 +19,7 @@ const FoodGallery = () => {
     <>
       <div className="food-gallery" id="food-container">
         {meals.map((meal) => (
+          //evidai key props vennam because evidai rendering list cheyund
           <div key={meal.idMeal} className="food-card">
             <img src={meal.strMealThumb} alt={meal.strMeal} />
             <h3>{meal.strMeal}</h3>

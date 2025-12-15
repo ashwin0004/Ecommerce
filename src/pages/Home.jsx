@@ -1,5 +1,6 @@
 import React, { useState, useEffect, useCallback } from "react";
 import FoodCard from "../components/FoodCard";
+// eslint-disable-next-line
 import Footer from "../components/Footer";
 
 const Home = () => {
@@ -78,7 +79,7 @@ const Home = () => {
                         <input
                             type="text"
                             id="search"
-                            placeholder="Search for food (e.g. pizza, burger)..."
+                            placeholder="Search for food (e.g. pizza, burger..)"
                             value={searchQuery}
                             onChange={(e) => setSearchQuery(e.target.value)}
                             onKeyDown={(e) => e.key === 'Enter' && setDebouncedQuery(searchQuery)}
@@ -110,7 +111,9 @@ const Home = () => {
                                 fontSize: '1.2rem'
                             }}
                         >
+
                             <i className="fa-solid fa-magnifying-glass"></i>
+
                         </button>
                     </div>
                 </div>

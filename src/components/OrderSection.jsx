@@ -1,6 +1,6 @@
 import React from "react";
 import OrderCard from "./OrderCard";
-import { orders } from "../data/orders";
+const orders = [];
 
 const OrderSection = () => {
     return (

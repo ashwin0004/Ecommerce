@@ -7,6 +7,7 @@ const SearchBar = ({ onSearch }) => {
             <button onClick={onSearch}>Search</button>
         </div>
     );
+
 };
 
 export default SearchBar;

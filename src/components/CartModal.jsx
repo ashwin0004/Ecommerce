@@ -7,7 +7,8 @@ const CartModal = ({ isOpen, onClose }) => {
     if (!isOpen) return null;
 
     return (
-        <div className="cart-modal" style={{ display: 'flex' }} onClick={(e) => e.target.className === 'cart-modal' && onClose()}>
+        <div className="cart-modal" style={{ display: 'flex' }}
+            onClick={(e) => e.target.className === 'cart-modal' && onClose()}>
             <div className="cart-modal-content">
                 <div className="cart-header">
                     <h2>Your Cart</h2>
@@ -16,7 +17,7 @@ const CartModal = ({ isOpen, onClose }) => {
 
                 {cart.length === 0 ? (
                     <div id="cart-empty" style={{ display: 'block' }}>
-                        <p>Your cart is empty 😕</p>
+                        <p>Your cart is empty...😊</p>
                         <button className="start-shopping-btn" onClick={onClose}>Start Shopping</button>
                     </div>
                 ) : (
@@ -38,6 +39,7 @@ const CartModal = ({ isOpen, onClose }) => {
                                 </div>
                             ))}
                         </div>
+
 
                         <div className="cart-footer">
                             <button className="clear-cart-btn" onClick={clearCart}>Clear Cart</button>

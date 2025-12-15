@@ -1,6 +1,7 @@
 import React from "react";
 import RestaurantCard from "./RestaurantCard";
-import { restaurants } from "../data/restaurants";
+const restaurants = [];
+
 
 const RestaurantList = () => {
     return (
@@ -21,6 +22,7 @@ const RestaurantList = () => {
                 <div className="restaurant-list">
                     {restaurants.map((r, i) => (
                         <RestaurantCard key={i} data={r} />
+
                     ))}
                 </div>
             </div>
