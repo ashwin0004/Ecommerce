@@ -5,7 +5,7 @@ const FoodGallery = () => {
 
   const fetchMeals = async (query = "pizza") => {
     const res = await fetch(
-      `https://www.themealdb.com/api/json/v1/1/search.php?s=${query}`
+      `https://www.themealdb.com/api/json/v1/1/search.php?s=${query}`  //api endpoint correct aanu
     );
     const data = await res.json();
     setMeals(data.meals || []); //meals empty ayitt start akkunth []

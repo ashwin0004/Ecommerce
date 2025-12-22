@@ -76,12 +76,12 @@ export const CartProvider = ({ children }) => {
                 if (item.id === itemId) {
                     const newQuantity = item.quantity + change;
                     if (newQuantity <= 0) {
-                        return null; // Will be filtered out
+                        return null; // Will be filter out cheyan
                     }
                     return { ...item, quantity: newQuantity };
                 }
                 return item;
-            }).filter(Boolean); // Remove nulls (items with 0 quantity)
+            }).filter(Boolean); // nulls remove cheyum (items with 0 quantity avum)
         });
     };
 

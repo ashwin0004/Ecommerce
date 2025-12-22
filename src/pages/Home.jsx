@@ -17,23 +17,35 @@ const Home = () => {
             setCurrentPage(1); // Reset to page 1 on new search
         }, 1000);
 
-        return () => clearTimeout(timer);
-    }, [searchQuery]);
+        return () => clearTimeout(timer); // prevent multiple api calls
+    }, [searchQuery]); // searchquery change avumbo mathram call cheyyan
 
-    const fetchMeals = useCallback(async (query, page) => {
-        if (!query) {
+    const fetchMeals = useCallback(async (query, page) => {  //useacallback prevent unnecessary re-renders
+        if (!query) { // If query is empty, clear meals and return
             setMeals([]);
             return;
         }
 
         setLoading(true);
         try {
-            const url = `https://world.openfoodfacts.org/cgi/search.pl?search_terms=${encodeURIComponent(query)}&page=${page}&json=true`;
+            // Using TheMealDB which is more reliable for recipe/meal searches
+            const url = `https://www.themealdb.com/api/json/v1/1/search.php?s=${encodeURIComponent(query)}`;  // encodeURIComponent prevent uri errors
             const response = await fetch(url);
             const data = await response.json();
-            setMeals(data.products || []);
+
+            // Map TheMealDB format to what FoodCard expects
+            const mappedMeals = (data.meals || []).map(meal => ({
+                id: meal.idMeal,
+                product_name: meal.strMeal,
+                image_url: meal.strMealThumb,
+                brands: meal.strCategory, // Using category as "brand" equivalent
+                // Keep original data just in case
+                ...meal
+            }));
+
+            setMeals(mappedMeals);  // save meals in state
         } catch (error) {
-            console.error("Error fetching meals:", error);
+            console.error("Error fetching meals:", error); // prevent app crash
             setMeals([]);
         } finally {
             setLoading(false);
@@ -42,7 +54,7 @@ const Home = () => {
 
     useEffect(() => {
         if (debouncedQuery) {
-            fetchMeals(debouncedQuery, currentPage);
+            fetchMeals(debouncedQuery, currentPage); // api run cheyunth if only the user stops typing for 1 s
         }
     }, [debouncedQuery, currentPage, fetchMeals]);
 
@@ -96,7 +108,7 @@ const Home = () => {
                         />
                         <button
                             onClick={() => {
-                                setDebouncedQuery(searchQuery);
+                                setDebouncedQuery(searchQuery); //The input box shows whatever is inside searchQuery
                                 setCurrentPage(1);
                             }}
                             style={{

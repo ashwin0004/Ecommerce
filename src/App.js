@@ -6,12 +6,17 @@ import Footer from "./components/Footer";
 
 import "./style.css"; // your full CSS
 
+import { Routes, Route } from 'react-router-dom';
+import FoodDetails from "./pages/FoodDetails";
+
 function App() {
     return (
         <CartProvider>
             <Navbar />
-            <Home />
-            <Footer />
+            <Routes>
+                <Route path="/" element={<><Home /><Footer /></>} />
+                <Route path="/food/:id" element={<FoodDetails />} />
+            </Routes>
         </CartProvider>
     );
 }
