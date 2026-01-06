@@ -7,33 +7,33 @@ const Footer = () => {
                 <div className="points">
                     COMPANY
                     <ul className="footer-ul">
-                        <li className="footer-li"><a href="#">About us</a></li>
-                        <li className="footer-li"><a href="#">Team</a></li>
-                        <li className="footer-li"><a href="#">Careers</a></li>
-                        <li className="footer-li"><a href="#">Swiggy Blog</a></li>
-                        <li className="footer-li"><a href="#">Bug Bounty</a></li>
-                        <li className="footer-li"><a href="#">Swiggy Super</a></li>
-                        <li className="footer-li"><a href="#">Swiggy Corporate</a></li>
-                        <li className="footer-li"><a href="#">Swiggy Instamart</a></li>
+                        <li className="footer-li"><a href="/">About us</a></li>
+                        <li className="footer-li"><a href="/">Team</a></li>
+                        <li className="footer-li"><a href="/">Careers</a></li>
+                        <li className="footer-li"><a href="/">Swiggy Blog</a></li>
+                        <li className="footer-li"><a href="/">Bug Bounty</a></li>
+                        <li className="footer-li"><a href="/">Swiggy Super</a></li>
+                        <li className="footer-li"><a href="/">Swiggy Corporate</a></li>
+                        <li className="footer-li"><a href="/">Swiggy Instamart</a></li>
                     </ul>
                 </div>
                 <div className="points">
                     CONTACT
                     <ul className="footer-ul">
-                        <li className="footer-li"><a href="#">Help & Support</a></li>
-                        <li className="footer-li"><a href="#">Partner with us</a></li>
-                        <li className="footer-li"><a href="#">Ride with us</a></li>
+                        <li className="footer-li"><a href="/">Help & Support</a></li>
+                        <li className="footer-li"><a href="/">Partner with us</a></li>
+                        <li className="footer-li"><a href="/">Ride with us</a></li>
                     </ul>
                 </div>
                 <div className="points">
                     LEGAL
                     <ul className="footer-ul">
-                        <li className="footer-li"><a href="#">Terms & Conditions</a></li>
-                        <li className="footer-li"><a href="#">Refund & Cancellation</a></li>
-                        <li className="footer-li"><a href="#">Privacy Policy</a></li>
-                        <li className="footer-li"><a href="#">Cookie Policy</a></li>
-                        <li className="footer-li"><a href="#">Offer Terms</a></li>
-                        <li className="footer-li"><a href="#">Phishing & Fraud</a></li>
+                        <li className="footer-li"><a href="/">Terms & Conditions</a></li>
+                        <li className="footer-li"><a href="/">Refund & Cancellation</a></li>
+                        <li className="footer-li"><a href="/">Privacy Policy</a></li>
+                        <li className="footer-li"><a href="/">Cookie Policy</a></li>
+                        <li className="footer-li"><a href="/">Offer Terms</a></li>
+                        <li className="footer-li"><a href="/">Phishing & Fraud</a></li>
                     </ul>
                 </div>
                 <div className="points">
