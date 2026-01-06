@@ -17,6 +17,7 @@ const FoodDetails = () => {
                 if (data.meals && data.meals[0]) {
                     setMeal(data.meals[0]);
                 }
+                
             } catch (error) {
                 console.error("Error fetching meal details:", error);
             } finally {

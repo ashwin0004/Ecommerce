@@ -45,11 +45,12 @@ const Home = () => {
 
             setMeals(mappedMeals);  // save meals in state
         } catch (error) {
-            console.error("Error fetching meals:", error); // prevent app crash
+            console.error("Error fetching meals:", error); // prevent app crash on error
             setMeals([]);
         } finally {
             setLoading(false);
         }
+        
     }, []);
 
     useEffect(() => {
